@@ -17,3 +17,12 @@ para ejecutar el servidor con este modulo:
 
 npx nodemon index.js //por ejemplo
 
+uso de Middlewares de terceror
+
+morgan:
+para la documentacion puedes buscarla como npm morgan
+npm i morgan
+control+espacio nos muestra los parametro que resibe dentri de morgan();
+
+static file:
+se encarga de enviar archivos estaticos al frontend como htm, css y javaScript
