@@ -25,11 +25,7 @@ const app = express();
 app.use(express.json());
 
 app.get('/',(req, res) => {
-<<<<<<< HEAD
     res.send('<h1> Word<h1/>', 200);
-=======
-  res.send('<h1>Hello World<h1/>', 200);//si silo quiers mandar un valor usamos send
->>>>>>> f049b3d9364977f681050218ccebc88e7c1489a4
 });
 
 app.listen(3000, () => {
