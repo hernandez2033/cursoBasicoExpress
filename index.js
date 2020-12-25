@@ -21,8 +21,15 @@ server.listen(3000, () =>{
 const express = require('express');
 const app = express();
 
+//para que express pueda leer archivos .js 
+app.use(express.json());
+
 app.get('/',(req, res) => {
+<<<<<<< HEAD
     res.send('<h1> Word<h1/>', 200);
+=======
+  res.send('<h1>Hello World<h1/>', 200);//si silo quiers mandar un valor usamos send
+>>>>>>> f049b3d9364977f681050218ccebc88e7c1489a4
 });
 
 app.listen(3000, () => {
@@ -36,21 +43,30 @@ app.listen(3000, () => {
 //creando un servidor con express
 
 //enrutamiento
-app.get('/contactos', (req, res) =>{
-    res.send('<h1>Contactos de la empresa</h1>');
-});
+
 //peticiones de http methods
 
 //metodo GET
-app.get('/leer', (req, ser) => {//metodo get para mostrar o extraer del servidor
-    res.send('Usando el metodo GET');
+
+app.get('/user', (req, res) =>{//peticion que devuelva algo el servidor
+    res.json({
+        username: "Milton",
+        lastname: "Hernandez"
+    });//si quieres mandar mas de un valor o un objeto json
 });
+
 //metodo POST
-app.post('/enviar', (req, res) => {//nos permite enviar al servidor 
+app.post('/user', (req, res) => {//nos permite enviar al servidor, puedo usar el mismo nombre del get ya que son distintos metodos que afecta a user
+    console.log(req.body);//para mostra por consolo lo que esta resiviendo por el metodo post, que ha sido enviado desde posman
     res.send("Usando el metodo POST");
 });
+
+app.post('/iduser/:id', (req, res) => {//las instruccion /:id es para indicarle que id es una variable que puede resivir cualquier dato
+    console.log(req.body);
+    console.log(req.params);//muestra el patametro de la peticion id
+});
 //metodo PUT
-app.put('/updata', (req, res) => { //nos permite actualizar al servidor
+app.put('/update', (req, res) => { //nos permite actualizar al servidor
     res.send("Usando el metodo PUT");
 });
 //metodo DELETE
