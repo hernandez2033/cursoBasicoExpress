@@ -15,5 +15,5 @@ npm i nodemon -D
 
 para ejecutar el servidor con este modulo:
 
-npx node index.js
+npx nodemon index.js //por ejemplo
 
