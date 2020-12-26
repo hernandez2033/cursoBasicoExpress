@@ -4,9 +4,23 @@ framework Express:
 
 npm i express
 
+otros framework:
+adonis js //ya proveve una estructura definida
+sails js //ya proveve una estructura definida
+koa js //ya proveve una estructura definida
+hapi js //ya proveve una estructura definida
+kraken js //ya proveve una estructura definida(desaroyado por paypal)
+
 modulos:
 modulo colors
 npm intall colors
+modulor de plantilla: 
+npm intall ejs
+tambien tenemos:
+npm install pug
+otra alternativa:
+npm install handlebars
+
 
 modulo nodemon:
 para el el servidor realize cambios en tiempo real 
@@ -24,5 +38,24 @@ para la documentacion puedes buscarla como npm morgan
 npm i morgan
 control+espacio nos muestra los parametro que resibe dentri de morgan();
 
-static file:
-se encarga de enviar archivos estaticos al frontend como htm, css y javaScript
+Integracion con base de datos en express:
+
+    Cassandra
+    Couchbase
+    CouchDB
+    LevelDB
+    MySQL
+    MongoDB
+    Neo4j
+    Oracle
+    PostgreSQL
+    Redis
+    SQL Server
+    SQLite
+    Elasticsearch
+
+orms: 
+para hacer consultas a la base de datos con funciones de javaScript
+Sequelize //para bases de datos relacionales
+mongoose // para bases de datos no relacionales
+
